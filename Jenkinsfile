@@ -22,7 +22,6 @@ pipeline {
         stage('Deploy to k8s') {
 
             when {
-                branch 'master'
                 allOf {
                     expression { return params.VERSION != 'none' }
                     expression { return params.VERSION != '' }
