@@ -30,7 +30,7 @@ pipeline {
 
             steps {
                 withKubeConfig(credentialsId: 'a9fe556b-01b0-4354-9a65-616baccf9cac') {
-                    sh "helm upgrade -n portscanner -i --set image.tag=${env.VERSION} nmapserviceproxy helm/nmapserviceproxy"
+                    sh "helm upgrade -n portscanner -i --set image.tag=${params.VERSION} nmapserviceproxy helm/nmapserviceproxy"
                 }
             }
         }
