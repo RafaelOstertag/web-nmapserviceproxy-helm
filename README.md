@@ -1,4 +1,1 @@
-Nmapserviceproxy Helm Chart.
-
-This project is intended to be built as Pipeline rather than
-Multibranch on Jenkins.
+Helm charts for  [nmapserviceproxy](https://github.com/RafaelOstertag/web-nmapserviceproxy).

@@ -1,0 +1,24 @@
+version: 2.1
+parameters:
+  version:
+    type: string
+    default: none
+
+orbs:
+  c: rafaelostertag/common-orb@1.14.0
+
+workflows:
+  version: 2
+  deploy-services:
+    when:
+      not:
+        or:
+          - equal: [ none, <<pipeline.parameters.version>> ]
+          - equal: [ "", <<pipeline.parameters.version>> ]
+    jobs:
+      - c/deploy-with-helm:
+          name: deploy nmapservice
+          namespace: portscanner
+          release: nmapserviceproxy
+          chart: helm/nmapserviceproxy
+          version: <<pipeline.parameters.version>>
