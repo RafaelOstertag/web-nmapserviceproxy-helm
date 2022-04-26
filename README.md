@@ -1,1 +1,1 @@
-Helm charts for  [nmapserviceproxy](https://github.com/RafaelOstertag/web-nmapserviceproxy).
+Helm charts for [nmapserviceproxy](https://github.com/RafaelOstertag/web-nmapserviceproxy).
